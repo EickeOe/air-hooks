@@ -1,5 +1,5 @@
 import {useState, useRef, useEffect, useCallback} from 'react';
-import {getNextState} from '@/utils/getNextState';
+import getNextState from '@/utils/getNextState';
 type SetStateAction<S> = (prevState: S | ((prevState: S) => S | Promise<S>)) => Promise<S>;
 type AsyncAction<S> = (value: S) => Promise<S>;
 
