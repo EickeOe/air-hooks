@@ -19,7 +19,7 @@ const parse = (str: string) => {
     return str
 }
 
-export default function getQueryParams(search: string): { [key: string]: any } {
+export default function getSearchParams(search: string = location.search): { [key: string]: any } {
     const searchParams = new URLSearchParams(search) as Object as string[]
     const temp: { [key: string]: any } = {}
     searchParams.forEach((value: string, key: number) => {
